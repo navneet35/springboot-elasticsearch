@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.violet.example</groupId>
-	<artifactId>VioletExample</artifactId>
+	<groupId>com.spring-es</groupId>
+	<artifactId>SpringBoot-ES</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>VioletExample</name>
+	<name>SpringBoot-ES</name>
 	<description>Basic Elastic Search Project</description>
 	<properties>
-		<es.version>6.2.2</es.version>
 		<es.restclient.version>6.2.2</es.restclient.version>
+		<joda-time.version>2.9.4</joda-time.version>
 	</properties>
 
 	<parent>
@@ -17,26 +17,7 @@
 		<version>2.0.0.RELEASE</version>
 	</parent>
 
-	<repositories>
-		<repository>
-			<id>elastic-lucene-snapshots</id>
-			<name>Elastic Lucene Snapshots</name>
-			<url>http://s3.amazonaws.com/download.elasticsearch.org/lucenesnapshots/00142c9</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	
 	<dependencies>
-		<dependency>
-			<groupId>org.elasticsearch</groupId>
-			<artifactId>elasticsearch</artifactId>
-			<version>${es.version}</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -58,6 +39,12 @@
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>elasticsearch-rest-high-level-client</artifactId>
 			<version>${es.restclient.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda-time.version}</version>
 		</dependency>
 
 	</dependencies>
